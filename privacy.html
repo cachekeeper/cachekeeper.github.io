@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — CacheKeeper</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      color: #2a2510;
+      background: #f7f2dd;
+      line-height: 1.7;
+    }
+    h1 { font-size: 28px; font-weight: 600; color: #3d4a2a; margin-bottom: 4px; }
+    h2 { font-size: 17px; font-weight: 600; color: #3d4a2a; margin-top: 36px; }
+    p, li { font-size: 15px; color: #2a2510; }
+    ul { padding-left: 20px; }
+    .updated { font-size: 13px; color: #7a704a; margin-top: 4px; }
+    a { color: #3d4a2a; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: May 25, 2026</p>
+
+  <p>CacheKeeper is a household inventory app built for Android. This policy explains what data the app collects, how it is used, and your rights. CacheKeeper has two modes: <strong>Solo</strong> (no account required) and <strong>HomeSync</strong> (optional premium feature that syncs your inventory across household devices). The data practices differ between the two.</p>
+
+  <h2>1. Data stored on your device (all users)</h2>
+  <p>All inventory data — item names, quantities, expiration dates, locations, photos, and nutritional information — is stored locally on your device using an encrypted SQLite database. In Solo mode, this data never leaves your device and is not transmitted to any server.</p>
+
+  <h2>2. HomeSync — optional cloud sync</h2>
+  <p>HomeSync is a premium feature that lets multiple devices in a household share the same inventory in real time. If you choose to use HomeSync:</p>
+  <ul>
+    <li><strong>Account required.</strong> You must create an account using an email address and password, or sign in with Google. Your email address is stored by Google Firebase Authentication and is used solely to identify your account. We do not sell or share it.</li>
+    <li><strong>Inventory synced to the cloud.</strong> Item records (names, quantities, expiration dates, categories, notes, barcodes, and similar fields) are synced to Google Firestore, a cloud database operated by Google. Photos are <em>not</em> synced — they remain local to each device.</li>
+    <li><strong>Household membership.</strong> If you create or join a household, your account identifier and role (owner or member) are stored in Firestore to manage access. Other household members can see shared inventory but cannot see your email address.</li>
+    <li><strong>Google Firebase.</strong> CacheKeeper uses Google Firebase for authentication and cloud storage. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</li>
+    <li><strong>Data in transit.</strong> All communication with Firebase uses HTTPS/TLS encryption.</li>
+  </ul>
+  <p>HomeSync is entirely optional. If you never use it, no data leaves your device except for barcode lookups (see section 3).</p>
+
+  <h2>3. Barcode lookups</h2>
+  <p>When you scan a barcode, CacheKeeper sends the barcode number to third-party product databases to retrieve product information (name, quantity, nutrition). No personally identifiable information is included in these requests. The databases CacheKeeper may query are:</p>
+  <ul>
+    <li><a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a> — a free, open-source food database. Their privacy policy is at <a href="https://world.openfoodfacts.org/privacy" target="_blank">world.openfoodfacts.org/privacy</a>.</li>
+    <li><a href="https://fdc.nal.usda.gov" target="_blank">USDA FoodData Central</a> — a public database operated by the U.S. Department of Agriculture, used as a fallback when Open Food Facts does not have a result.</li>
+  </ul>
+
+  <h2>4. Camera, photo access, and metadata</h2>
+  <p>CacheKeeper requests access to your camera and photo library solely to let you attach photos to inventory items and to scan barcodes. Before any photo is saved by the app, CacheKeeper re-encodes it as a clean JPEG, which removes embedded metadata including GPS coordinates and device information (EXIF data). Photos are stored in the app's private directory on your device and are never uploaded to any server.</p>
+
+  <h2>5. Analytics and advertising</h2>
+  <p>CacheKeeper does not collect analytics, crash reports, advertising identifiers, or any other telemetry. The app contains no advertising SDKs. Firebase Analytics is not enabled in this app.</p>
+  <p>If you use HomeSync, Google Firebase may collect service-level operational data (such as authentication events and database request counts) as part of running its infrastructure. This is covered by Google's privacy policy linked in section 2, not by CacheKeeper.</p>
+
+  <h2>6. Data deletion</h2>
+  <p>You can delete all local app data at any time from the Settings screen using the "Reset all data" option. If you are signed in to HomeSync, this also signs you out and removes your data from the shared household on our servers. You may also sign out of HomeSync from the HomeSync screen at any time, which removes your account from the household. Uninstalling the app removes all locally stored data from your device.</p>
+
+  <h2>7. Children's privacy</h2>
+  <p>CacheKeeper is not directed at children under 13. The app does not knowingly collect personal information from children. If you believe a child has provided personal information through HomeSync, please contact us at the address below and we will delete it promptly.</p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>If this policy changes materially, the updated date at the top of this page will reflect that. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+  <h2>9. Contact</h2>
+  <p>Questions or concerns? Email us at <a href="mailto:CacheKeeper.app@gmail.com">CacheKeeper.app@gmail.com</a>.</p>
+</body>
+</html>
